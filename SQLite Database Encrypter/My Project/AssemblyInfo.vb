@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("SQLite Database Encrypter")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("SQLite Database Encrypter")>
-<Assembly: AssemblyCopyright("Copyright ©  2018")>
+<Assembly: AssemblyTitle("Devil7 - SQLite Database Password Tool")>
+<Assembly: AssemblyDescription("Simple Tool to Set/Change/Remove Password to/from SQLite Databases using System.Data.SQLite")>
+<Assembly: AssemblyCompany("Devil7 Softwares")>
+<Assembly: AssemblyProduct("Devil7 - SQLite Database Password Tool")>
+<Assembly: AssemblyCopyright("Copyright © Devil7 Softwares 2018")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
