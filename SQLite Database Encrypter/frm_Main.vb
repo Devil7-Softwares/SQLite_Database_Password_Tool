@@ -47,7 +47,7 @@ Public Class frm_Main
 
     Private Sub rb_RemovePassword_CheckedChanged(sender As Object, e As EventArgs) Handles rb_RemovePassword.CheckedChanged
         If rb_RemovePassword.Checked Then
-            Panel_OldPassword.Visible = False
+            Panel_OldPassword.Visible = True
             Panel_NewPassword.Visible = False
             Panel_ConfirmPassword.Visible = False
         End If
