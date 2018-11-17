@@ -174,6 +174,7 @@ Partial Class frm_Main
         Me.txt_ConfirmPassword.Name = "txt_ConfirmPassword"
         Me.txt_ConfirmPassword.Size = New System.Drawing.Size(324, 20)
         Me.txt_ConfirmPassword.TabIndex = 10
+        Me.txt_ConfirmPassword.UseSystemPasswordChar = True
         '
         'lbl_ConfirmPassword
         '
@@ -203,6 +204,7 @@ Partial Class frm_Main
         Me.txt_NewPassword.Name = "txt_NewPassword"
         Me.txt_NewPassword.Size = New System.Drawing.Size(324, 20)
         Me.txt_NewPassword.TabIndex = 10
+        Me.txt_NewPassword.UseSystemPasswordChar = True
         '
         'lbl_NewPassword
         '
@@ -223,6 +225,7 @@ Partial Class frm_Main
         Me.Panel_OldPassword.Name = "Panel_OldPassword"
         Me.Panel_OldPassword.Size = New System.Drawing.Size(435, 26)
         Me.Panel_OldPassword.TabIndex = 9
+        Me.Panel_OldPassword.Visible = False
         '
         'txt_OldPassword
         '
@@ -232,6 +235,7 @@ Partial Class frm_Main
         Me.txt_OldPassword.Name = "txt_OldPassword"
         Me.txt_OldPassword.Size = New System.Drawing.Size(324, 20)
         Me.txt_OldPassword.TabIndex = 10
+        Me.txt_OldPassword.UseSystemPasswordChar = True
         '
         'lbl_OldPassword
         '
@@ -244,7 +248,9 @@ Partial Class frm_Main
         '
         'dlg_Open
         '
-        Me.dlg_Open.FileName = "OpenFileDialog1"
+        Me.dlg_Open.Filter = "SQLite Database Files (*.db,*.sqlite,*.db3,*.sqlite3)|*.db;*.sqlite;*.db3;*.sqlit" &
+    "e3|All Files|*"
+        Me.dlg_Open.FilterIndex = 0
         '
         'frm_Main
         '
