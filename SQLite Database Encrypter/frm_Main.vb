@@ -94,7 +94,7 @@ Public Class frm_Main
                 MsgBox("'Confirm Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
                 Return False
             End If
-            If txt_NewPassword.Text = txt_ConfirmPassword.Text Then
+            If txt_NewPassword.Text <> txt_ConfirmPassword.Text Then
                 MsgBox("Passwords not matching.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
                 Return False
             End If
@@ -111,7 +111,7 @@ Public Class frm_Main
                 MsgBox("'Confirm Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
                 Return False
             End If
-            If txt_NewPassword.Text = txt_OldPassword.Text Then
+            If txt_NewPassword.Text <> txt_OldPassword.Text Then
                 MsgBox("Passwords not matching.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
                 Return False
             End If
