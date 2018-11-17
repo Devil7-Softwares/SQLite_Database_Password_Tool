@@ -18,6 +18,8 @@
 '     Dineshkumar T                                                        '
 '=========================================================================='
 
+Imports System.Data.SQLite
+
 Public Class frm_Main
 
 #Region "Radio Button Events"
@@ -52,6 +54,71 @@ Public Class frm_Main
             txt_FileName.Text = dlg_Open.FileName
         End If
     End Sub
+
+    Private Sub btn_Ok_Click(sender As Object, e As EventArgs) Handles btn_Ok.Click
+        If CheckFields() Then
+            Try
+                Dim ConnectionString As String = String.Format("Data Source={0};{1}", txt_FileName.Text, If(rb_ChangePassword.Checked Or rb_RemovePassword.Checked, String.Format("Password={0};", txt_OldPassword.Text), ""))
+                Using Connection As New SQLiteConnection(ConnectionString)
+                    Connection.Open()
+                    If rb_SetPassword.Checked Or rb_ChangePassword.Checked Then
+                        Connection.ChangePassword(txt_NewPassword.Text)
+                    ElseIf rb_RemovePassword.Checked Then
+                        Connection.ChangePassword("")
+                    End If
+                End Using
+                MsgBox("Process Completed.", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Done")
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
+            End Try
+        End If
+    End Sub
+#End Region
+
+#Region "Functions"
+    Private Function CheckFields() As Boolean
+        If rb_SetPassword.Checked Then
+            If String.IsNullOrEmpty(txt_NewPassword.Text) Then
+                MsgBox("'New Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+            If String.IsNullOrEmpty(txt_ConfirmPassword.Text) Then
+                MsgBox("'Confirm Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+            If txt_NewPassword.Text = txt_ConfirmPassword.Text Then
+                MsgBox("Passwords not matching.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+        ElseIf rb_ChangePassword.Checked Then
+            If String.IsNullOrEmpty(txt_OldPassword.Text) Then
+                MsgBox("'Old Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+            If String.IsNullOrEmpty(txt_NewPassword.Text) Then
+                MsgBox("'New Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+            If String.IsNullOrEmpty(txt_ConfirmPassword.Text) Then
+                MsgBox("'Confirm Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+            If txt_NewPassword.Text = txt_OldPassword.Text Then
+                MsgBox("Passwords not matching.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+        ElseIf rb_RemovePassword.Checked Then
+            If String.IsNullOrEmpty(txt_OldPassword.Text) Then
+                MsgBox("'Old Password' can't be empty.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+                Return False
+            End If
+        End If
+        If Not My.Computer.FileSystem.FileExists(txt_FileName.Text) Then
+            MsgBox("Given file doesn't exist.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+            Return False
+        End If
+        Return True
+    End Function
 #End Region
 
 End Class
