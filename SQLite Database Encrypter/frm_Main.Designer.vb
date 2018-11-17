@@ -65,9 +65,9 @@ Partial Class frm_Main
         'rb_ChangePassword
         '
         Me.rb_ChangePassword.AutoSize = True
-        Me.rb_ChangePassword.Location = New System.Drawing.Point(100, 3)
+        Me.rb_ChangePassword.Location = New System.Drawing.Point(127, 3)
         Me.rb_ChangePassword.Name = "rb_ChangePassword"
-        Me.rb_ChangePassword.Size = New System.Drawing.Size(91, 17)
+        Me.rb_ChangePassword.Size = New System.Drawing.Size(111, 17)
         Me.rb_ChangePassword.TabIndex = 1
         Me.rb_ChangePassword.Text = "Change Password"
         Me.rb_ChangePassword.UseVisualStyleBackColor = True
@@ -75,9 +75,9 @@ Partial Class frm_Main
         'rb_RemovePassword
         '
         Me.rb_RemovePassword.AutoSize = True
-        Me.rb_RemovePassword.Location = New System.Drawing.Point(197, 3)
+        Me.rb_RemovePassword.Location = New System.Drawing.Point(251, 3)
         Me.rb_RemovePassword.Name = "rb_RemovePassword"
-        Me.rb_RemovePassword.Size = New System.Drawing.Size(92, 17)
+        Me.rb_RemovePassword.Size = New System.Drawing.Size(114, 17)
         Me.rb_RemovePassword.TabIndex = 2
         Me.rb_RemovePassword.Text = "Remove Password"
         Me.rb_RemovePassword.UseVisualStyleBackColor = True
@@ -97,13 +97,13 @@ Partial Class frm_Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_FileName.Location = New System.Drawing.Point(121, 44)
         Me.txt_FileName.Name = "txt_FileName"
-        Me.txt_FileName.Size = New System.Drawing.Size(292, 20)
+        Me.txt_FileName.Size = New System.Drawing.Size(372, 20)
         Me.txt_FileName.TabIndex = 4
         '
         'btn_Browse
         '
         Me.btn_Browse.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_Browse.Location = New System.Drawing.Point(419, 43)
+        Me.btn_Browse.Location = New System.Drawing.Point(499, 43)
         Me.btn_Browse.Name = "btn_Browse"
         Me.btn_Browse.Size = New System.Drawing.Size(26, 23)
         Me.btn_Browse.TabIndex = 5
@@ -113,7 +113,7 @@ Partial Class frm_Main
         'btn_Ok
         '
         Me.btn_Ok.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_Ok.Location = New System.Drawing.Point(370, 173)
+        Me.btn_Ok.Location = New System.Drawing.Point(450, 173)
         Me.btn_Ok.Name = "btn_Ok"
         Me.btn_Ok.Size = New System.Drawing.Size(75, 23)
         Me.btn_Ok.TabIndex = 6
@@ -135,7 +135,7 @@ Partial Class frm_Main
         Me.table_Options.Name = "table_Options"
         Me.table_Options.RowCount = 1
         Me.table_Options.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.table_Options.Size = New System.Drawing.Size(292, 26)
+        Me.table_Options.Size = New System.Drawing.Size(372, 26)
         Me.table_Options.TabIndex = 7
         '
         'table_Password
@@ -153,7 +153,7 @@ Partial Class frm_Main
         Me.table_Password.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.table_Password.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.table_Password.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.table_Password.Size = New System.Drawing.Size(441, 96)
+        Me.table_Password.Size = New System.Drawing.Size(521, 96)
         Me.table_Password.TabIndex = 8
         '
         'Panel_ConfirmPassword
@@ -164,7 +164,7 @@ Partial Class frm_Main
         Me.Panel_ConfirmPassword.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_ConfirmPassword.Location = New System.Drawing.Point(3, 67)
         Me.Panel_ConfirmPassword.Name = "Panel_ConfirmPassword"
-        Me.Panel_ConfirmPassword.Size = New System.Drawing.Size(435, 26)
+        Me.Panel_ConfirmPassword.Size = New System.Drawing.Size(515, 26)
         Me.Panel_ConfirmPassword.TabIndex = 11
         '
         'txt_ConfirmPassword
@@ -173,7 +173,7 @@ Partial Class frm_Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_ConfirmPassword.Location = New System.Drawing.Point(106, 3)
         Me.txt_ConfirmPassword.Name = "txt_ConfirmPassword"
-        Me.txt_ConfirmPassword.Size = New System.Drawing.Size(324, 20)
+        Me.txt_ConfirmPassword.Size = New System.Drawing.Size(404, 20)
         Me.txt_ConfirmPassword.TabIndex = 10
         Me.txt_ConfirmPassword.UseSystemPasswordChar = True
         '
@@ -194,7 +194,7 @@ Partial Class frm_Main
         Me.Panel_NewPassword.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_NewPassword.Location = New System.Drawing.Point(3, 35)
         Me.Panel_NewPassword.Name = "Panel_NewPassword"
-        Me.Panel_NewPassword.Size = New System.Drawing.Size(435, 26)
+        Me.Panel_NewPassword.Size = New System.Drawing.Size(515, 26)
         Me.Panel_NewPassword.TabIndex = 10
         '
         'txt_NewPassword
@@ -203,7 +203,7 @@ Partial Class frm_Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_NewPassword.Location = New System.Drawing.Point(106, 3)
         Me.txt_NewPassword.Name = "txt_NewPassword"
-        Me.txt_NewPassword.Size = New System.Drawing.Size(324, 20)
+        Me.txt_NewPassword.Size = New System.Drawing.Size(404, 20)
         Me.txt_NewPassword.TabIndex = 10
         Me.txt_NewPassword.UseSystemPasswordChar = True
         '
@@ -224,7 +224,7 @@ Partial Class frm_Main
         Me.Panel_OldPassword.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_OldPassword.Location = New System.Drawing.Point(3, 3)
         Me.Panel_OldPassword.Name = "Panel_OldPassword"
-        Me.Panel_OldPassword.Size = New System.Drawing.Size(435, 26)
+        Me.Panel_OldPassword.Size = New System.Drawing.Size(515, 26)
         Me.Panel_OldPassword.TabIndex = 9
         Me.Panel_OldPassword.Visible = False
         '
@@ -234,7 +234,7 @@ Partial Class frm_Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_OldPassword.Location = New System.Drawing.Point(106, 3)
         Me.txt_OldPassword.Name = "txt_OldPassword"
-        Me.txt_OldPassword.Size = New System.Drawing.Size(324, 20)
+        Me.txt_OldPassword.Size = New System.Drawing.Size(404, 20)
         Me.txt_OldPassword.TabIndex = 10
         Me.txt_OldPassword.UseSystemPasswordChar = True
         '
@@ -267,7 +267,7 @@ Partial Class frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(457, 208)
+        Me.ClientSize = New System.Drawing.Size(537, 208)
         Me.Controls.Add(Me.cb_ShowPassword)
         Me.Controls.Add(Me.table_Password)
         Me.Controls.Add(Me.table_Options)
