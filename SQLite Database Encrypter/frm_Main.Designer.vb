@@ -42,6 +42,7 @@ Partial Class frm_Main
         Me.txt_OldPassword = New System.Windows.Forms.TextBox()
         Me.lbl_OldPassword = New System.Windows.Forms.Label()
         Me.dlg_Open = New System.Windows.Forms.OpenFileDialog()
+        Me.cb_ShowPassword = New System.Windows.Forms.CheckBox()
         Me.table_Options.SuspendLayout()
         Me.table_Password.SuspendLayout()
         Me.Panel_ConfirmPassword.SuspendLayout()
@@ -252,11 +253,22 @@ Partial Class frm_Main
     "e3|All Files|*"
         Me.dlg_Open.FilterIndex = 0
         '
+        'cb_ShowPassword
+        '
+        Me.cb_ShowPassword.AutoSize = True
+        Me.cb_ShowPassword.Location = New System.Drawing.Point(12, 177)
+        Me.cb_ShowPassword.Name = "cb_ShowPassword"
+        Me.cb_ShowPassword.Size = New System.Drawing.Size(102, 17)
+        Me.cb_ShowPassword.TabIndex = 9
+        Me.cb_ShowPassword.Text = "Show Password"
+        Me.cb_ShowPassword.UseVisualStyleBackColor = True
+        '
         'frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(457, 208)
+        Me.Controls.Add(Me.cb_ShowPassword)
         Me.Controls.Add(Me.table_Password)
         Me.Controls.Add(Me.table_Options)
         Me.Controls.Add(Me.btn_Ok)
@@ -304,4 +316,5 @@ Partial Class frm_Main
     Friend WithEvents lbl_NewPassword As Label
     Friend WithEvents txt_OldPassword As TextBox
     Friend WithEvents dlg_Open As OpenFileDialog
+    Friend WithEvents cb_ShowPassword As CheckBox
 End Class

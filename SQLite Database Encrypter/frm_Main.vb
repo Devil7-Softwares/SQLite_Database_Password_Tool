@@ -127,6 +127,12 @@ Public Class frm_Main
         End If
         Return True
     End Function
+
+    Private Sub cb_ShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles cb_ShowPassword.CheckedChanged
+        txt_OldPassword.UseSystemPasswordChar = Not cb_ShowPassword.Checked
+        txt_NewPassword.UseSystemPasswordChar = Not cb_ShowPassword.Checked
+        txt_ConfirmPassword.UseSystemPasswordChar = Not cb_ShowPassword.Checked
+    End Sub
 #End Region
 
 End Class
