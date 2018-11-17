@@ -22,6 +22,12 @@ Imports System.Data.SQLite
 
 Public Class frm_Main
 
+#Region "Form Events"
+    Private Sub frm_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txt_FileName.Text = My.Settings.Filename
+    End Sub
+#End Region
+
 #Region "Radio Button Events"
     Private Sub rb_SetPassword_CheckedChanged(sender As Object, e As EventArgs) Handles rb_SetPassword.CheckedChanged
         If rb_SetPassword.Checked Then
@@ -52,6 +58,8 @@ Public Class frm_Main
     Private Sub btn_Browse_Click(sender As Object, e As EventArgs) Handles btn_Browse.Click
         If dlg_Open.ShowDialog = DialogResult.OK Then
             txt_FileName.Text = dlg_Open.FileName
+            My.Settings.Filename = dlg_Open.FileName
+            My.Settings.Save()
         End If
     End Sub
 
